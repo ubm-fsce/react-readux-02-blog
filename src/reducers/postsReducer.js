@@ -3,7 +3,7 @@ export default (state = [], action) => {
    return action.payload;
  }
  return state; */
-  // switecher are most common in reducers.
+  // switch statements are most common in reducers.
   switch (action.type) {
     case 'FETCH_POSTS':
       return action.payload;

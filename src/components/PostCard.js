@@ -7,9 +7,27 @@ class PostCard extends React.Component {
     this.props.fetchPosts();
   }
 
+  renderList() {
+    return this.props.posts.map((post) => {
+      return (
+        <div className='item' key={post.i}>
+          <i className='large middld aligned icon user'></i>
+          <div className='content'>
+            <div className='description'>
+              <h2> {post.title}</h2>
+              <p> {post.body}</p>
+            </div>
+          </div >
+        </div >
+      )
+    }
+    );
+  }
+
   render() {
-    console.log(this.props.posts);
-    return <div> Post List </div>;
+    //console.log(this.props.posts);
+    return <div className='ui relaxed divided list'>
+      {this.renderList()} </div>;
   }
 }
 
