@@ -3,12 +3,14 @@ import { connect } from 'react-redux';
 import { fetchUser } from '../actions/';
 
 class UserHeader extends React.Component {
+  /*  no need post combined action 
   componentDidMount() {
     this.props.fetchUser(this.props.showUserId);
-  }
+  } */
 
   render() {
-    /* const user = this.props.usrs.find(
+    /* bad approach when not using ownProps
+     const user = this.props.usrs.find(
       (usr) => usr.id === this.props.showUserId
     ); */
     const { usr } = this.props;
